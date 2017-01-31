@@ -4,10 +4,12 @@
 <!-- This file is not used by default, you need to use the -c option to use it. -->
 <loggedFS logEnabled="true" printProcessName="true">
 	<includes>
-		<include extension=".*" uid="*" action=".*" retname=".*"/>
+		<!-- Log successful reads and writes to CSV files. -->
+		<include extension=".*\.csv" uid="*" action="read" retname="SUCCESS"/>
+		<include extension=".*\.csv" uid="*" action="write" retname="SUCCESS"/>
 	</includes>
 	<excludes>
-		<!-- Do not log getattr operations -->
-		<exclude extension=".*" uid="*" action="getattr" retname=".*"/>
+		<!-- Do not monitor loggedfs.csv output. -->
+		<exclude extension=".*loggedfs\.csv" uid="*" action="*" retname="*"/>
 	</excludes>
 </loggedFS>
