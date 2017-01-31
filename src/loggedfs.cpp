@@ -43,7 +43,7 @@ static void openLogFile(const char* filename)
     fprintf(pFileLog, "%s\n", Header);
     fclose(pFileLog);
 
-    fileLog = open(filename, O_WRONLY | O_CREAT | O_APPEND);
+    fileLog = open(filename, O_WRONLY | O_CREAT | O_APPEND, 0600);
     fileLogNode = new StdioNode(fileLog, 16);
     fileLogNode->subscribeTo(RLOG_CHANNEL("out"));
     rLog(errChannel, "LoggedFS log file: %s", filename);

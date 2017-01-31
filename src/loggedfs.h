@@ -63,7 +63,7 @@ const int MaxFuseArgs = 32;
  * There may be a better way but I don't have time for now.
  */
 
-const string DelimStr = "\t";
+const string DelimStr = ",";
 const char* Delim = DelimStr.data();
 
 const string RowSuffixStr = DelimStr + "%s" + DelimStr + "%d" + DelimStr +

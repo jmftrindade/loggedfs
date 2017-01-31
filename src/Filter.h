@@ -23,6 +23,7 @@
 #ifndef LOGGEDFS_FILTER_H
 #define LOGGEDFS_FILTER_H
 
+#include <cstring>
 #include <stdio.h>
 #include <pcre.h>
 #include <string>
