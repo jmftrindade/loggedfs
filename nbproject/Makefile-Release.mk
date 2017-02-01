@@ -44,7 +44,7 @@ CFLAGS=
 
 # CC Compiler Flags
 CCFLAGS=-ansi
-CXXFLAGS=-ansi -std=c++11
+CXXFLAGS=-ansi
 
 # Fortran Compiler Flags
 FFLAGS=
