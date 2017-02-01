@@ -43,6 +43,9 @@ static void openLogFile(const char* filename)
     fprintf(pFileLog, "%s\n", Header);
     fclose(pFileLog);
 
+    // FIXME: Joana - so this rLog library hardcodes timestamps with HH:MM:ss
+    // resolution, but we need finer grained.  Either replace the use of rLog
+    // altogether, or ship code with custom version of rLog.
     fileLog = open(filename, O_WRONLY | O_CREAT | O_APPEND, 0600);
     fileLogNode = new StdioNode(fileLog, 16);
     fileLogNode->subscribeTo(RLOG_CHANNEL("out"));
