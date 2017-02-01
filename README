@@ -1,3 +1,22 @@
+Note for this fork:
+===================
+
+This is a fork from https://github.com/vitkin/loggedfs as the original code
+failed to build for Ubuntu 16.04.
+
+Also note that instead of using the vanilla librlog, we use the fork at
+https://github.com/jmftrindade/rlog which provides millisecond precision for
+timestamps.  Assuming you have successfully built and installed that version,
+you can use it instead of your regular distro version via LD_LIBRARY_PATH
+
+, e.g., to monitor all files in your home directory:
+
+LD_LIBRARY_PATH=/usr/local/lib loggedfs -c loggedfs.xml -l /var/tmp/$USER-home-fs.log ~
+
+
+Original README below:
+======================
+
 LoggedFS-CSV 0.1
 
 Introduction:
