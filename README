@@ -9,9 +9,13 @@ https://github.com/jmftrindade/rlog which provides millisecond precision for
 timestamps.  Assuming you have successfully built and installed that version,
 you can use it instead of your regular distro version via LD_LIBRARY_PATH
 
-, e.g., to monitor all files in your home directory:
+e.g., to monitor all files in your home directory:
 
 LD_LIBRARY_PATH=/usr/local/lib loggedfs -c loggedfs.xml -l /var/tmp/$USER-home-fs.log ~
+
+And to stop monitoring:
+
+sudo umount -l ~
 
 
 Original README below:
